@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form method="post" class="container-row translator_form">
+    <div class="container">
+        <input type="submit" value="Translate" class="button">
+        <div class="container-row">
+            <textarea name="text" class="text_input" placeholder="Введіть текст який ви хочете перекласти">{{input}}</textarea>
+            <textarea name="output" class="text_input" readonly>{{output}}</textarea>
+        </div>
+    
+        <div class="container-row">
+            <select name="from_language"class="right_round">
+                <option value="English" selected>English</option>
+                <option value="Ukrainian">Ukrainian</option>
+            </select>
+            <select name="to_language"class="left_round">
+                <option value="English">English</option>
+                <option value="Ukrainian" selected>Ukrainian</option>
+            </select>
+        </div>
+    </div>
+</form>
+
+
+{% endblock %}
