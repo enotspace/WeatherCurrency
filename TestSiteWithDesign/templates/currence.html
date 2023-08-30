@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <link type="text/css" href="{{ url_for('static', filename='css/currence.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<form method="get" class="container-row currence_form">
+    <div class="container container-row">
+        <div class="container-column">
+            <div class="currence">$</div>
+            <div class="currence-text">USD</div>
+        </div>
+        <input type="number" name="input_num" class="numarea">
+        <!-- <textarea name="text" class="text_input">{{input}}</textarea> -->
+    </div>
+
+    <input type="submit" class="button" value="->">
+
+    <div class="container container-row">
+        <div class="container-column">
+            <div class="currence">₴</div>
+            <div class="currence-text">UAH</div>
+        </div>
+        <textarea name="output" class="numarea" readonly>{{output}}</textarea>
+    </div>
+</form>
+
+
+{% endblock %}
