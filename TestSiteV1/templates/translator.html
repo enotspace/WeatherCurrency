@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <link type="text/css" href="{{ url_for('static', filename='css/translator.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<form method="post" class="container-row translator_form">
+    <div class="container-column container-item container">
+        <select name="from_language"class="right_round">
+            <option value="English" selected>English</option>
+            <option value="Ukrainian">Ukrainian</option>
+        </select>
+        <textarea name="text" class="text_input" placeholder="Введіть текст який ви хочете перекласти">{{input}}</textarea>
+    </div>
+    <div class="container-column container-item translator-buttons">
+        <input type="submit" class="container-column-item button" value="">
+    </div>
+
+    <div class="container-column container-item container">
+        <select name="to_language"class="left_round">
+            <option value="English">English</option>
+            <option value="Ukrainian" selected>Ukrainian</option>
+        </select>
+        <textarea name="output" class="text_ouput" readonly>{{output}}</textarea>
+    </div>
+</form>
+
+
+{% endblock %}

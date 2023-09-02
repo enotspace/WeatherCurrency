@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <link type="text/css" href="{{ url_for('static', filename='css/currency.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<form method="POST" class="container-row currency_form">
+    <div class="container container-row">
+        <div class="container-column">
+            <select name="from" class="currency-text">
+                {%for currency in currencies%}
+                    <option value="{{currency}}">{{currency}}</option>
+                {%endfor%}
+            </select>
+        </div>
+        <input type="number" name="input_num" class="numarea" value="{{input}}" step="0.01">
+    </div>
+
+    <input type="submit" class="button" value="->">
+
+    <div class="container container-row">
+        <div class="container-column">
+            <!-- <div class="currency">€</div> -->
+            <select name="to" class="currency-text">
+                {%for i in currencies%}
+                    <option value="{{i}}" selected>{{i}}</option>
+                {%endfor%}
+            </select>
+        </div>
+        <input type="number" name="output" class="numarea" readonly value="{{output}}" step="0.01">
+    </div>
+</form>
+
+
+{% endblock %}
