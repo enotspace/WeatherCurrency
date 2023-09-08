@@ -1,0 +1,77 @@
+body{
+  background-color: rgb(159,205,177);
+}
+
+.container_item{
+  margin: 0 3vw;
+}
+
+.text_input, .text_ouput{
+  font-size: 2em;
+  /* width: 370px; */
+  width: 100%;
+  height: 323px;
+  resize: none;
+  border-radius: 0 0 25px 25px;
+  border: 1px solid #000;
+  background: #FBF7A9;
+  outline: none;
+}
+
+.right_round{ 
+  /* width: 370px; */
+  width: 100%;
+  height: 68px;
+  background: #FFDF6F;
+}
+.left_round{ 
+  /* width: 370px; */
+  width: 100%;
+  height: 68px;
+  background: #FF9A6F;
+}
+
+.text_input{
+  background-color: #FBF7A9;
+}
+.text_ouput{
+  background-color: #FFDCBB;
+}
+
+.button{
+  width: 56px; height: 56px;
+  outline: none;
+  border-radius: 50%;
+  background-image: url("../img/Sumbit.png");
+  background-size: cover;
+}
+
+select{
+  padding: 0;
+  width: 25vw;
+  height: 40px;
+  background-color: #ffffff;
+  border: 1px solid #000;
+  cursor: pointer;
+  font-size: 1em;
+  color: #000;
+  font-weight: 500;
+}
+.translator_form{
+  margin: 10% 0;
+}
+
+@media (max-width:767px) {
+  .left_round, .right_round, .text_input, .text_ouput{
+    width: 90vw;
+  }
+  .text_input, .text_ouput{
+    height: 30vh;
+  }
+  .translator_form{
+    margin: 0 0;
+  }
+  .container_item{
+    margin: 1vh 0;
+  }
+}

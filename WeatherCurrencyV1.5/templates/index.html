@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{{ super() }}
+
+{% block css %}
+    <link type="text/css" href="{{ url_for('static', filename='css/index.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+<div class="index_text">
+    Це сайт про погоду, переклад, та курс валют. <br>
+    <a href="/translator">Перекладач</a>
+    <a href="/weather">Погода</a>
+    <a href="/currency">Конвертор валют</a>
+</div>
+
+{% endblock %}
