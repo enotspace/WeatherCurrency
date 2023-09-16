@@ -1,0 +1,48 @@
+body{
+  background: url("../img/bg2.png")
+}
+
+.index{
+  display: flex;
+  height: 75vh;
+}
+
+.button{
+  margin: auto 0px;
+  width: 13.75rem;
+  height: 5rem;
+  border-radius: 1.875rem;
+}
+
+
+.button a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  font-family: Inria Serif;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.currency_button{
+  margin-top: 25%;
+  background: #60DD6C;
+}
+
+.translator_button{
+  background: #B89CCE;
+}
+
+.weather_button{
+  background: #5CB1FF;
+}
+@media (max-width:767px) {
+  .button{
+    margin: auto;
+  }
+  .currency_button{
+    margin-top: auto;
+  }
+}

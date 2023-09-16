@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{{ super() }}
+
+{% block css %}
+    <link type="text/css" href="{{ url_for('static', filename='css/article.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+<form method="post">
+    <h1 class="text">Створення статті</h1>
+    <input type="text" name="title" class="title_input" placeholder="Введіть назву статті"><br>
+    <textarea rows='5' name="text" class="text_input"placeholder='Напишіть текст статті'></textarea><br>
+    <input type="submit" class="button" value="Підтвердити">
+</form>
+
+<script>
+const textarea = document.querySelector('textarea');
+
+textarea.addEventListener( 'input', autosize );
+             
+function autosize(){
+  this.style.height = 'auto';
+  let applyNow = this.style.offsetHeight;
+  this.style.height = this.scrollHeight - '-4' + 'px';
+}
+</script>
+
+{% endblock %}

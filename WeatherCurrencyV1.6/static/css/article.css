@@ -1,0 +1,109 @@
+body{
+    background-color: rgb(234, 234, 188);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title_input,.text_input{
+    border: none;
+    resize: none;
+    margin: 5px auto;
+    font-size: 1em;
+    border-radius: 10px;
+    outline: none;
+    height: 23px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-family: 'Inter';
+    padding: 0px 10px;
+}
+.title_input{
+    text-align: center;
+}
+.text_input{
+    height: calc(23px*5);
+    width: 50%;
+    font-size: 1.0em;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: background-color 0.4s, box-shadow 0.4s;
+}   
+
+.button:hover{
+    background-color: #409643;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+}
+.button:active{
+    box-shadow: rgba(100, 100, 111, 0.6) 0px 7px 29px 0px;
+    background-color: #317933;
+}
+
+.all_blocks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview_block{
+    width: 75%;
+    background-color: cadetblue;
+    padding: 20px;
+    /* padding-right: 100px; */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    justify-content:space-between;
+}
+
+.preview_block h2{
+    margin: 0;
+    font-size: 75px;
+}
+
+.plus_button{
+    margin: 25px;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+}
+
+.del_button{
+    background-color: #b84646;
+    width: 60px;
+    height: 60px;
+}
+
+.del_button:hover{
+    background-color: rgb(226, 75, 75);
+}
+.del_button:active{
+    background-color: rgb(219, 36, 36);
+}
+
+@media (max-width:767px) {
+    .preview_block h2{
+        font-size: 10vw;
+    }
+    .preview_block{
+        padding: 20px;
+    }
+}

@@ -1,0 +1,39 @@
+body{background-color: rgb(159,186,205);}
+
+.weather_image{
+  font-size: 30vh;
+}
+.city_text{
+  text-align:end;
+  font-size: 15vh;
+}
+.temperature{
+  font-size: 15vh;
+}
+table, th, td{
+  font-size: 2.0em;
+  text-align: center;
+}
+
+@media (max-width:767px) {
+  table, th, td{
+    font-size: 10vw;
+  }
+  .adaptive_direction{
+    width: 100%;
+  }
+}
+
+table{
+  border-radius: 20px;
+  background: #5168A1;
+  width: 50vw;
+}
+.weather_table{
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.wind_speed{
+  font-size: 0.4em;
+}

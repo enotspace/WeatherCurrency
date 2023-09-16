@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Inria+Serif:wght@400&family=Inter:wght@500&family=Poppins&display=swap');
+
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  background-color: rgb(247, 247, 247);
+  font-family: 'Inter';
+}
+
+.container{
+  max-width: 1600px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.adaptive_direction{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.container_column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width:1200px) {
+  .container{
+    max-width: 970px;
+  }
+}
+@media (max-width:992px) {
+  .container{
+    max-width: 750px;
+  }
+}
+@media (max-width:767px) {
+  .container{
+    max-width: none;
+  }
+  .adaptive_direction{
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{{ super() }}
+
+{% block css %}
+    <link type="text/css" href="{{ url_for('static', filename='css/article.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+<h1 class="text"> {{article.title}} </h1>
+
+<p style="text-align: justify;">{{article.text}}</p>
+
+<a class="button" href="/posts">Повернутися</a>
+
+{% endblock %}
