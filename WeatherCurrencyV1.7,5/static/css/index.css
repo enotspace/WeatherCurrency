@@ -1,0 +1,63 @@
+body{
+  background-image: url('../img/bg2.jpg');
+  background-size: 100% 1500%;
+}
+
+.index{
+  left: 15vw;
+  top: 0;
+  position: fixed;
+  display: flex;
+  height: 100%;
+  grid-gap: 200px;
+}
+
+.button{
+  margin: 20px;
+  width: 250px;
+  height: 250px;
+  border-radius: 30px;
+}
+
+.button a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  font-family: Inria Serif;
+  font-size: 3em;
+  text-decoration: none;
+  color: black;
+}
+
+.currency_button{
+  background: #FFA217;
+}
+
+.translator_button{
+  background: #6D6E97;
+}
+
+.weather_button{
+  background: #6D6E97;
+}
+
+.pages_button{
+  background: #FFA217;
+}
+
+@media (max-width:767px) {
+  .button{
+    width: 80vw;
+    height: 10vh;
+  }
+  .index{
+    left: 0;
+    position:relative;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    grid-gap: 0px;
+  }
+}

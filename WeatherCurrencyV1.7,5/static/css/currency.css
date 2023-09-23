@@ -1,0 +1,72 @@
+body{
+  background-image: url('../img/bg3.jpg');
+}
+
+textarea{
+  resize: none;
+}
+
+.filed{
+  background: #D9D9D9;
+  width: 40vw;
+  height: 30vh;
+}
+
+.numarea{
+  border: none;
+  outline: none;
+  background: #D9D9D9;
+  text-align: center;
+  font-size: 8em;
+  width: 80%;
+  height: 100%;
+}
+
+#result{
+  line-height: 27vh;
+}
+
+.currency_text{
+  width: 10vw;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10em;
+  font-style: normal;
+}
+
+.currency_form{
+  margin-top: 30vh;
+  justify-content: space-between;
+}
+.button{
+  border: none;
+  background-color: transparent;
+  color: #FFF;
+  font-family: Inter;
+  text-align: center;
+  font-size: 7em;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (max-width:767px) {
+  .currency_text{
+    appearance: none;
+    width: 110%;
+    height: 100%;
+  }
+  .currency_form{
+    margin-top: 5vh;
+  }
+  .filed{
+    width: 90vw;
+  }
+  .numarea{
+    font-size: 5em;
+    width: 100%;
+  }
+}

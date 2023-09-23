@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{{ super() }}
+
+{% block css %}
+    <link type="text/css" href="{{ url_for('static', filename='css/currency.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<form method="POST" class="adaptive_direction currency_form" id="currency_form">
+    <div class="filed container_row">
+        <div class="container_column">
+            <select name="from" class="currency_text">
+                {%for i in currencies_icons%}
+                    <option value="{{i}}">{{i}}</option >
+                {%endfor%}
+            </select>
+        </div>
+        <input type="number" name="input_num" class="numarea" value="{{input}}" step="0.01">
+    </div>
+
+    <input type="submit" class="button" value="->">
+
+    <div class="filed container_row">
+        <div class="container_column">
+            <select name="to" class="currency_text">
+                {%for i in currencies_icons%}
+                    <option value="{{i}}" selected>{{i}}</option>
+                {%endfor%}
+            </select>
+        </div>
+        <textarea readonly id="result" class="numarea"></textarea>
+    </div>
+</form>
+
+<script>
+$(document).ready(function () {
+    $('#currency_form').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: '/convert',
+            data: $('#currency_form').serialize(),
+            success: function (data) {
+                $('#result').html(data.result);
+            },
+            error: function (data) {
+                $('#result').html(data.error);
+            }
+        });
+    });
+});
+</script>
+{% endblock %}
