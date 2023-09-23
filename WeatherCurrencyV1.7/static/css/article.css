@@ -1,0 +1,185 @@
+body{
+  background: #3586ff;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title_input,.text_input{
+    border: none;
+    resize: none;
+    margin: 5px auto;
+    font-size: 1em;
+    border-radius: 10px;
+    outline: none;
+    height: 23px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-family: 'Inter';
+    padding: 0px 10px;
+}
+.title_input{
+    text-align: center;
+}
+.text_input{
+    height: calc(23px*5);
+    width: 50%;
+    font-size: 1.0em;
+}
+
+h1{
+    text-align: center;
+    font-size: 5em;
+    margin: 10px;
+    color: #F0F4F9;
+}
+
+p{
+    font-size: 3em;
+    color: #F0F4F9;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}   
+
+.button:hover{
+    background-color: #409643;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+    color: rgb(222, 222, 222);
+}
+.button:active{
+    box-shadow: rgba(100, 100, 111, 0.6) 0px 7px 29px 0px;
+    background-color: #317933;
+    color: rgb(182, 182, 182);
+}
+
+.all_blocks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview_block{
+    width: 75%;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    box-shadow: rgba(100, 100, 111, 0.6) 0px 7px 29px 0px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    justify-content:space-between;
+}
+
+.preview_block h2{
+    margin: 0;
+    font-size: 75px;
+}
+
+.plus_button{
+    margin: 25px;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+  z-index: 10;
+}
+
+.del_button{
+    background-color: rgb(226, 75, 75);
+    width: 60px;
+    height: 60px;
+}
+
+.del_button:hover{
+    background-color: rgb(183, 30, 30);
+}
+.del_button:active{
+    background-color: #803131;
+}
+
+@media (max-width:767px) {
+    .preview_block h2{
+        font-size: 10vw;
+    }
+    .preview_block{
+        padding: 20px;
+    }
+    .box{
+        width: 70%;
+      }
+    .popup{
+        width: 70%;
+    }
+}
+
+.air{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
+  background-size: 1000px 100px;
+}
+.air1{
+  animation: wave 30s linear infinite;
+  z-index: -6;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+.air2{
+  animation: wave2 15s linear infinite;
+  z-index: -7;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+.air3{
+  animation: wave 30s linear infinite;
+  z-index: -8;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+.air4{
+  animation: wave2 5s linear infinite;
+  z-index: -9;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+@keyframes wave{
+  0%{
+    background-position-x: 0px; 
+  }
+  100%{
+    background-position-x: 1000px; 
+  }
+}
+@keyframes wave2{
+  0%{
+    background-position-x: 0px; 
+  }
+  100%{
+    background-position-x: -1000px; 
+  }
+}
