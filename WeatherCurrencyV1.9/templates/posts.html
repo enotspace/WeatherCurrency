@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{{ super() }}
+
+{% block css %}
+    <link type="text/css" href="{{ url_for('static', filename='css/article.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+<div class='air air1'></div>
+<div class='air air2'></div>
+<div class='air air3'></div>
+<div class='air air4'></div>
+
+<div class="all_blocks">
+    <h1>Усі статті на сайті</h1>
+    {% for i in articles %}
+    <div class="preview_block adaptive_direction">
+        <div class="container_column">
+            <h2>{{i.title}}</h2>
+            <b>{{i.date.date()}}</b>
+        </div>
+        <div class="container_row">
+            <a href="/posts/{{i.id}}" class="button">Детальніше</a>
+            <a href="del-post/{{i.id}}" class="button del_button"> <i class="fa-solid fa-trash-can"></i></a>
+        </div>
+    </div>
+    {%endfor%}
+</div>
+<a href="/create-article" class="button plus_button">+</a>
+
+{% endblock %}
