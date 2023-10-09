@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{{ super() }}
+
+{% block css %}
+    <link type="text/css" href="{{ url_for('static', filename='css/about.css')}}" rel="stylesheet">
+{% endblock %}
+{% block body %}
+
+<div class="block block1">
+    <div class="container_column">
+        <h1>Про нашу команду</h1>
+    </div>
+</div>
+
+
+
+<div class="block block2 adaptive_direction">
+    <div class="text_block container_column">
+        <h2>Провідний розробник </h2>
+        <p>Владислав Сідорчук</p>
+    </div>
+    <div class="image imageVlad"></div>
+</div>
+<div class="block block3 adaptive_direction flip">
+    <div class="image imageMasha"></div>
+    <div class="text_block container_column">
+        <h2> Дизайнер </h2>
+        <p>Марія Кондрова</p>
+    </div>
+</div>
+<div class="block block4 adaptive_direction">
+    <div class="text_block container_column">
+        <h2> Другорядний розробник </h2>
+        <p>Олександр-Василь Іжик</p>
+    </div>
+    <div class="image imageSasha"></div>
+</div>
+<div class="area" >
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div >
+
+{% endblock %}

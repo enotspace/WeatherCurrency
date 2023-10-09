@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{{ super() }}
+
+{% block css %}
+    <link type="text/css" href="{{ url_for('static', filename='css/index.css')}}" rel="stylesheet">
+    <meta name="google-site-verification" content="hhAeiyQRXZZ5O6fAhBkJSmQKnul5sKygd19vy8P8PmQ" />
+{% endblock %}
+
+{% block body %}
+
+<div class="block block1">
+    <div class="container_column">
+        <h1>Це сайт на якому ви можете знайти перекладач, погоду, конвертор валют та статті</h1>
+        <h2>Усе потрібне в одному сайті</h2>
+    </div>
+</div>
+<div class="block block2 adaptive_direction">
+    <div class="text_block container_column">
+        <h2> Перекладач </h2>
+        <p>Перекладач є важливим у нашому житті. З його допомогою ви можете спілкуватися з людьми інших держав. На нашому сайті перекладач містить близько 150 мов світу</p>
+    </div>
+    <a href="/translator"><img src="{{ url_for('static', filename='img/Translator_logo.png')}}"></a>
+</div>
+
+<div class="block block3 adaptive_direction flip">
+    <a href="/weather"><img src="{{ url_for('static', filename='img/Weather_logo.png')}}"></a>
+    <div class="text_block container_column">
+        <h2> Погода </h2>
+        <p>Зараз прогноз погоди потрібен кожному. На нашому сайті ви можете подивитися прогноз для будь-якого міста</p>
+    </div>
+</div>
+<div class="block block4 adaptive_direction">
+    <div class="text_block container_column">
+        <h2> Конвертор валют </h2>
+        <p>Вам може знадобитися конвертер валют, щоб конвертувати одну валюту в іншу. Це може допомогти вам, якщо ви плануєте поїздку в іншу країну</p>
+    </div>
+    <a href="/currency"><img src="{{ url_for('static', filename='img/Currency_logo.png')}}"></a>
+</div>
+
+<div class="block block5 adaptive_direction flip">
+    <a href="/posts"><img src="{{ url_for('static', filename='img/Articles_logo.png')}}"></a>
+    <div class="text_block container_column">
+        <h2> Статті </h2>
+        <p>Наш сайт також є частково соціальною мережею. Ви можете опублікувати статтю на будь-яку тему</p>
+    </div>
+</div>
+<div class="area" >
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div >
+
+{% endblock %}

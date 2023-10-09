@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{{ super() }}
+
+{% block css %}
+<link type="text/css" href="{{ url_for('static', filename='css/currency.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<canvas id="stars" style="position:fixed;right:0;top:0;z-index:-10;"></canvas>
+
+<form method="POST" class="adaptive_direction currency_form" id="currency_form">
+  <div class="container_column">
+        <textarea name="input_num" class="numarea" onkeypress='validate(event)'></textarea>
+        <select name="from" class="currency_text">
+            {%for i in currencies%}
+                <option value="{{i}}">{{i}}</option >
+            {%endfor%}
+        </select>
+    </div>
+            
+    <input type="submit" class="button" value="->">
+
+    <div class="container_column">
+        <textarea readonly id="result" class="numarea" ></textarea>
+        <select name="to" class="currency_text">
+            {%for i in currencies%}
+                <option value="{{i}}" selected>{{i}}</option>
+            {%endfor%}
+        </select>
+    </div>
+</form>
+
+<script src="{{ url_for('static', filename='css/background.js')}}" type="text/javascript">
+</script>
+<script>
+$(document).ready(function () {
+    $('#currency_form').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: '/convert',
+            data: $('#currency_form').serialize(),
+            success: function (data) {
+                $('#result').html(data.result);
+            },
+            error: function (data) {
+                $('#result').html(data.error);
+            }
+        });
+    });
+});
+function validate(evt) {
+    var theEvent = evt || window.event;
+    var key = theEvent.keyCode || theEvent.which;
+    key = String.fromCharCode( key );
+    var regex = /[0-9]|\./;
+    if( !regex.test(key) ) {
+      theEvent.returnValue = false;
+      if(theEvent.preventDefault) theEvent.preventDefault();
+    }
+  }
+</script>
+{% endblock %}
